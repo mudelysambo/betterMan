@@ -1,5 +1,5 @@
 .main {
-    background-color: #71AEAE;
+    background-color: #1D5757;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -13,6 +13,11 @@
     line-height: 66px;
     font-weight: 800;
     font-size: 55px;
+}
+
+.main .starting{
+    color: #000;
+    margin-top: 75px;
 }
 
 .main p{
