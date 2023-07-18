@@ -1,45 +1,47 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Stack from 'react-bootstrap/Stack';
-import Footer from '../Components/Footer';
-import NavBar from '../Components/NavBar';
+import './stem.css';
+import Container from 'react-bootstrap/Container';
 
 function WebD(){
 return(
   <div>
    <header>
-    <NavBar />
+   
    </header>
 
 <h1> Stem Fields </h1> 
 <h3>Math Component</h3>
   
-    <Stack>
-    <Button href="" variant="primary" size="md" style={{color:'teal'}}>
-    HTML
+<Container>
+    <Stack direction="horizontal"  gap={3} className='d-grid gap-2'>
+    <Button href='' variant='info' size='md'  className='p-2' >
+   HTML
     </Button>
 
-    <Button href="" variant="primary" size="md" style={{color:'teal'}}>
+    <Button href="" variant='info' size='md'  className='p-2'  >
     CSS
     </Button>
 
-    <Button href="" variant="primary" size="md" style={{color:'teal'}}>
+    <Button href="" variant='info' size='md'  className='p-2' >
     Vanilla Javascript
     </Button>
 
-    <Button href="" variant="primary" size="md" style={{color:'teal'}}>
+    <Button href="" variant='info' size='md' className='p-2' >
     Javascript Framework
     </Button>
     
-    <Button href="" variant="primary" size="lg">
+    <Button href="" variant='info' size='md'  className='p-2' >
     Node.js
     </Button>
     
     </Stack>
+</Container>
 
 
 <footer> 
-  <Footer />
+ 
 </footer>
 
 </div>

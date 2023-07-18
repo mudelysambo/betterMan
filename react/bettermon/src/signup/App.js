@@ -8,6 +8,8 @@ import Math from './pages/Math';
 import It from './pages/InformationTechnology';
 import WebD from './pages/WebDevelopment';
 import About from './pages/MAbout';
+import Engineering from './pages/Engineering';
+import './stem.css';
 
 const App = () => {
 
@@ -33,7 +35,7 @@ const App = () => {
         <Route path={'/signup'} element={ <SignUp />} />
         <Route path={'/'} element={ <LogIn setToken={setToken}/>} />
         {token?<Route path={'/homepage'} element={ <HomePage token={token} />} />:""}
-        <Route path="/" element={<Stem />} />
+        <Route path="/stem" element={<Stem />} />
     <Route path={'/science'} element={<Science />} />
     <Route path={'/engineering'} element={<Engineering />} />
     <Route path={'/math'} element={<Math />} />
