@@ -1,21 +1,24 @@
 import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './components/home/homepage';
 import Hero from './components/home/hero/hero';
 import Login from './components/home/login';
 import Register from './components/home/register';
+import Courses  from './components/courses/course';
+
 
 const App = () => {
   return (
     <>
       <Router>
-        <Switch>
-          <Route path='/' exact component={Home} /> 
-          <Route path='/hero' exact component={Hero} /> 
-          <Route path='/login' exact component={Login} /> 
-          <Route path='/register' exact component={Register} /> 
-        </Switch>
+        <Routes>
+          <Route path='/'element ={Home} /> 
+          <Route path='/hero'element ={Hero} /> 
+          <Route path='/login' element={Login} /> 
+          <Route path='/register' element={Register} /> 
+          <Route path='/course' element={Courses} /> 
+        </Routes>
       </Router>
     </>
   )

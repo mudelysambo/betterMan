@@ -1,25 +1,25 @@
 import React from 'react';
-import { useHistory, BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { useNavigate, BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Hero from './hero/hero';
 
 const Register = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <>
         <h1>Register</h1>
         <button  
           className='signup'
-          onClick={() => history.push('/hero')}
+          onClick={() => navigate('/hero')}
           >home</button>
 
         <Router>
-            <Switch>
+            <Routes>
             <Route path="/hero">
             <Hero/>
           </Route>
-            </Switch>
+            </Routes>
         </Router>
     </>
   )
