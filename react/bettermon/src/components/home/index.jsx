@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory, BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { useNavigate, BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './home.css';
 import Login from './login';
@@ -7,7 +7,7 @@ import Register from './register';
 
 const Main = () => {
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,12 +21,12 @@ const Main = () => {
 
           <button  
           className='signup'
-          onClick={() => history.push('/hero')}
+          onClick={() => navigate('/hero')}
           >Get Started</button>
 
 
         <Router>
-            <Switch>
+            <Routes>
               <Route path="/login">
                 <Login/>
               </Route>
@@ -34,7 +34,7 @@ const Main = () => {
                 <Login/>
               </Route>
               <Route path='/register' component={Register} />
-            </Switch>
+            </Routes>
         </Router>
 
         </div>
